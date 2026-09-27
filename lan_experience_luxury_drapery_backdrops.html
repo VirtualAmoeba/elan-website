@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉLAN EXPERIENCE — Luxury Drapery Backdrop Rentals | Middle Georgia</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#070708',
+                            charcoal: '#121214',
+                            surface: '#18181c',
+                            border: '#282830',
+                            white: '#FAFAFB',
+                            gray: '#8E8E98',
+                            pink: '#FF0055',
+                            purple: '#7000FF',
+                            turquoise: '#00F0FF',
+                            orange: '#FF5500',
+                            gold: '#D4AF37'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Cormorant Garamond', 'Georgia', 'serif'],
+                        sans: ['Syne', 'Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    },
+                    letterSpacing: {
+                        superwide: '0.3em',
+                        ultra: '0.4em'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400&family=Syne:wght@400;500;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070708;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #282830;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF0055;
+        }
+
+        /* Architectural line accents */
+        .editorial-line {
+            background: linear-gradient(90deg, #FF0055 0%, #7000FF 50%, #00F0FF 100%);
+        }
+
+        /* Custom image zoom hover */
+        .img-reveal {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-container:hover .img-reveal {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        /* Glass panel */
+        .glass-panel {
+            background: rgba(18, 18, 20, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Text glow effect on hover */
+        .glow-hover:hover {
+            text-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
+        }
+
+        /* Grain overlay effect */
+        .bg-grain {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        /* Vertical text helper */
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-brand-white font-sans selection:bg-brand-pink selection:text-white antialiased overflow-x-hidden bg-grain">
+
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b border-white/5 py-5 px-6 md:px-12 glass-panel">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="group flex items-center gap-3">
+                <span class="font-serif text-2xl md:text-3xl font-bold tracking-tight text-white group-hover:text-brand-turquoise transition-colors duration-300">
+                    ÉLAN
+                </span>
+                <span class="text-[10px] font-mono tracking-superwide uppercase text-brand-gray border-l border-white/20 pl-3 py-1 hidden sm:inline-block">
+                    EXPERIENCE <span class="text-brand-pink ml-1">// 2349</span>
+                </span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-10 text-xs font-mono tracking-widest uppercase text-brand-gray">
+                <a href="#collection" class="hover:text-brand-white transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-pink hover:after:w-full after:transition-all">Collection</a>
+                <a href="#artistry" class="hover:text-brand-white transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-turquoise hover:after:w-full after:transition-all">The Artistry</a>
+                <a href="#florals" class="hover:text-brand-white transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-purple hover:after:w-full after:transition-all">Botanicals</a>
+                <a href="#photobooth" class="hover:text-brand-white transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-orange hover:after:w-full after:transition-all">Photobooth</a>
+                <a href="#booking" class="hover:text-brand-white transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-brand-gold hover:after:w-full after:transition-all">Reserve</a>
+            </nav>
+
+            <!-- CTA & Region Badge -->
+            <div class="flex items-center gap-5">
+                <div class="hidden xl:flex items-center gap-2 text-[10px] font-mono uppercase text-brand-gray/80 bg-brand-surface px-3 py-1.5 rounded-full border border-white/5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>MIDDLE GA // ATLANTA</span>
+                </div>
+
+                <a href="#booking" class="relative group inline-flex items-center justify-center px-6 py-2.5 text-xs font-mono uppercase tracking-widest text-brand-white border border-white/20 overflow-hidden rounded-none transition-all duration-300 hover:border-brand-pink">
+                    <span class="absolute inset-0 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-turquoise opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                    <span class="relative z-10 group-hover:text-white transition-colors flex items-center gap-2">
+                        BOOK EXPERIENCE
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-white p-2 focus:outline-none" aria-label="Toggle Navigation">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden mt-4 pt-4 border-t border-white/10 flex flex-col space-y-4 text-xs font-mono uppercase tracking-widest">
+            <a href="#collection" class="mobile-link text-brand-gray hover:text-white">Collection</a>
+            <a href="#artistry" class="mobile-link text-brand-gray hover:text-white">The Artistry</a>
+            <a href="#florals" class="mobile-link text-brand-gray hover:text-white">Botanicals</a>
+            <a href="#photobooth" class="mobile-link text-brand-gray hover:text-white">Photobooth Continuum</a>
+            <a href="#booking" class="mobile-link text-brand-pink">Reserve Date</a>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen pt-32 pb-20 px-6 md:px-12 flex flex-col justify-between overflow-hidden">
+        <!-- Background Architectural Glow Accents -->
+        <div class="absolute top-1/4 -left-32 w-96 h-96 bg-brand-purple/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-0 w-[500px] h-[500px] bg-brand-pink/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto">
+            
+            <!-- Hero Left Typography Block -->
+            <div class="lg:col-span-6 z-10 space-y-8">
+                <div class="inline-flex items-center gap-3 px-3 py-1 border border-brand-pink/30 bg-brand-pink/5 text-[11px] font-mono uppercase tracking-widest text-brand-pink">
+                    <span class="w-1.5 h-1.5 bg-brand-pink"></span>
+                    ARCHITECTURAL BACKDROP HOUSE
+                </div>
+
+                <h1 class="text-5xl sm:text-6xl xl:text-7xl font-serif font-light tracking-tight leading-[1.05] text-white">
+                    ATMOSPHERE <br>
+                    <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-white to-brand-gray">
+                        IN HIGH
+                    </span> <br>
+                    <span class="text-brand-pink uppercase tracking-wider text-4xl sm:text-5xl xl:text-6xl font-sans font-extrabold">
+                        DEFINITION.
+                    </span>
+                </h1>
+
+                <p class="text-sm md:text-base text-brand-gray max-w-md font-light leading-relaxed">
+                    Sculptural silk, heavyweight velvet, micro-pleated drape tension, and avant-garde botanical accents. Reimagining space transformation for Middle Georgia and beyond.
+                </p>
+
+                <div class="pt-4 flex flex-wrap items-center gap-6">
+                    <a href="#collection" class="bg-brand-white text-brand-black px-8 py-4 text-xs font-mono uppercase tracking-widest hover:bg-brand-pink hover:text-white transition-all duration-300 font-semibold flex items-center gap-3">
+                        EXPLORE ARCHIVE
+                        <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                    
+                    <a href="#artistry" class="text-xs font-mono uppercase tracking-widest text-brand-gray hover:text-brand-turquoise transition-colors flex items-center gap-2">
+                        <span>THE MATERIALITY SPECS</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Metrics Strip -->
+                <div class="pt-10 border-t border-white/10 grid grid-cols-3 gap-6 text-left">
+                    <div>
+                        <p class="text-2xl font-serif text-white">18 FT</p>
+                        <p class="text-[10px] font-mono text-brand-gray uppercase tracking-widest">Ceiling Spans</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-serif text-white">100%</p>
+                        <p class="text-[10px] font-mono text-brand-gray uppercase tracking-widest">Weighted Silks</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-serif text-white">01:01</p>
+                        <p class="text-[10px] font-mono text-brand-gray uppercase tracking-widest">Artisan Staged</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Right Editorial Visual Composition -->
+            <div class="lg:col-span-6 relative">
+                <!-- Background Geometric Grid Accent -->
+                <div class="absolute -inset-4 border border-white/10 pointer-events-none transform rotate-1"></div>
+                <div class="absolute -top-6 -right-6 text-[10px] font-mono text-brand-gray uppercase tracking-superwide vertical-text hidden sm:block">
+                    ÉLAN // HIGH DRAMA FABRIC STRUCTURES
+                </div>
+
+                <div class="relative img-container overflow-hidden bg-brand-surface aspect-[4/5] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80" 
+                         alt="Sculptural Luxury Drapery Backdrop Installation" 
+                         class="w-full h-full object-cover img-reveal filter grayscale contrast-125 hover:grayscale-0">
+                    
+                    <!-- Overlay Gradient & Badge -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>
+                    
+                    <div class="absolute bottom-6 left-6 right-6 p-6 glass-panel border border-white/10">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <span class="text-[10px] font-mono text-brand-pink uppercase tracking-widest block mb-1">FEATURED ARCHITECTURE</span>
+                                <h2 class="text-lg font-serif text-white font-medium">MONOLITH NO. 01 — ONYX CASCADE</h2>
+                                <p class="text-xs font-mono text-brand-gray mt-1">Sculpted Black Velvet & Single-Stem Orchid Installation</p>
+                            </div>
+                            <span class="text-xs font-mono text-brand-turquoise">2349.ED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editorial Line Marker -->
+                <div class="w-full h-[2px] editorial-line mt-6"></div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator Bar -->
+        <div class="mt-12 flex justify-between items-center text-[10px] font-mono text-brand-gray uppercase tracking-widest">
+            <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-brand-turquoise"></span>
+                <span>DESIGNS FOR HIGH-IMPACT CELEBRATIONS</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-8">
+                <span>MACON</span>
+                <span>//</span>
+                <span>WARNER ROBINS</span>
+                <span>//</span>
+                <span>PERRY</span>
+                <span>//</span>
+                <span>ATLANTA</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-28 px-6 md:px-12 bg-brand-charcoal border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <div class="lg:col-span-4 space-y-4">
+                    <span class="text-xs font-mono text-brand-purple tracking-widest uppercase">// 02 BRAND STATEMENT</span>
+                    <h3 class="text-3xl md:text-4xl font-serif font-light text-white leading-tight">
+                        NOT JUST A BACKDROP. <br>
+                        <span class="italic font-normal text-brand-gray">AN ATMOSPHERIC TRANSFORMATION.</span>
+                    </h3>
+                </div>
+
+                <div class="lg:col-span-8 space-y-8">
+                    <p class="text-xl md:text-2xl font-serif text-white/90 leading-relaxed font-light">
+                        We reject standard event staging. Élan Experience engineers architectural fabric environments defined by deep volume, deliberate tension, heavy gravity, and artistic floral sculptures.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-white/10 text-xs font-mono text-brand-gray leading-relaxed">
+                        <div>
+                            <span class="text-brand-pink block font-bold text-sm mb-2">01. RAW FABRIC VOLUME</span>
+                            <p>We source heavy-weight silks, dense matte velvets, and sheer translucent micro-mesh to create rich visual depth that responds dynamically to direct lighting.</p>
+                        </div>
+                        <div>
+                            <span class="text-brand-turquoise block font-bold text-sm mb-2">02. BOTANICAL RIGOR</span>
+                            <p>Our floral pairings are deliberate botanical sculptures—utilizing dramatic stems, negative space, and single-color foliage to complement, never overpower.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="collection" class="py-32 px-6 md:px-12 relative">
+        <div class="max-w-7xl mx-auto space-y-16">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/10 pb-8">
+                <div>
+                    <span class="text-xs font-mono text-brand-pink tracking-widest uppercase">// 03 THE ARCHIVE</span>
+                    <h2 class="text-4xl md:text-6xl font-serif font-light text-white mt-2">
+                        DRAPERY <span class="italic font-normal">COLLECTION</span>
+                    </h2>
+                </div>
+
+                <!-- Collection Filter Tabs -->
+                <div class="flex flex-wrap gap-3 font-mono text-xs uppercase tracking-wider" id="filterTabs">
+                    <button data-filter="all" class="filter-btn px-4 py-2 border border-brand-pink bg-brand-pink text-white transition-all">ALL PIECES (04)</button>
+                    <button data-filter="velvet" class="filter-btn px-4 py-2 border border-white/10 text-brand-gray hover:border-white hover:text-white transition-all">HEAVY VELVET</button>
+                    <button data-filter="sheer" class="filter-btn px-4 py-2 border border-white/10 text-brand-gray hover:border-white hover:text-white transition-all">SILK SHEER</button>
+                    <button data-filter="architectural" class="filter-btn px-4 py-2 border border-white/10 text-brand-gray hover:border-white hover:text-white transition-all">CURVED STRUCTURES</button>
+                </div>
+            </div>
+
+            <!-- Collection Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12" id="collectionGrid">
+                
+                <!-- Item 1 -->
+                <div class="collection-item group" data-category="velvet">
+                    <div class="relative img-container bg-brand-surface aspect-[4/5] border border-white/10 overflow-hidden cursor-pointer" onclick="openModal('MONOLITH NO. 01', 'Midnight Onyx Velvet', '100% Weighted Cotton-Velvet', 'Up to 18 ft', 'Asymmetrical cascading folds engineered for dramatic low-key event lighting. Includes hidden tension weights for structured floor pooling.')">
+                        <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Monolith No. 01 Onyx Velvet Drapery" 
+                             class="w-full h-full object-cover img-reveal filter grayscale">
+                        
+                        <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-black/80 backdrop-blur text-[10px] font-mono text-brand-pink uppercase tracking-widest border border-white/10">
+                            SPEC NO. 01 // VELVET
+                        </div>
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent opacity-90 group-hover:opacity-75 transition-opacity"></div>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 p-8 flex justify-between items-end">
+                            <div>
+                                <span class="text-xs font-mono text-brand-gray uppercase tracking-widest block">PIECE 01</span>
+                                <h3 class="text-2xl font-serif text-white font-medium group-hover:text-brand-turquoise transition-colors">MONOLITH NO. 01</h3>
+                                <p class="text-xs font-mono text-brand-gray mt-1">Midnight Onyx Velvet Cascade</p>
+                            </div>
+                            <span class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-brand-pink group-hover:bg-brand-pink transition-all">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="collection-item group" data-category="sheer">
+                    <div class="relative img-container bg-brand-surface aspect-[4/5] border border-white/10 overflow-hidden cursor-pointer" onclick="openModal('LUMEN 02', 'Ivory Silk Chiffon', 'Translucent Silk Micro-Sheer', 'Up to 16 ft', 'Ethereal, high-transparency layered panels designed to catch micro-diffused ambient light. Ideal for luxury weddings and brand galas.')">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Lumen 02 Ivory Silk Drapery" 
+                             class="w-full h-full object-cover img-reveal filter contrast-110">
+                        
+                        <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-black/80 backdrop-blur text-[10px] font-mono text-brand-turquoise uppercase tracking-widest border border-white/10">
+                            SPEC NO. 02 // SHEER
+                        </div>
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent opacity-90 group-hover:opacity-75 transition-opacity"></div>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 p-8 flex justify-between items-end">
+                            <div>
+                                <span class="text-xs font-mono text-brand-gray uppercase tracking-widest block">PIECE 02</span>
+                                <h3 class="text-2xl font-serif text-white font-medium group-hover:text-brand-turquoise transition-colors">LUMEN 02</h3>
+                                <p class="text-xs font-mono text-brand-gray mt-1">Ivory Silk Sheer Layering</p>
+                            </div>
+                            <span class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-brand-turquoise group-hover:bg-brand-turquoise group-hover:text-black transition-all">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="collection-item group" data-category="sheer">
+                    <div class="relative img-container bg-brand-surface aspect-[4/5] border border-white/10 overflow-hidden cursor-pointer" onclick="openModal('AURA 03', 'Deep Violet Sheer Mesh', 'Pleated Synthetic Silk Blend', 'Up to 14 ft', 'High-tension pleated geometry with micro-folds that react dramatically to hot pink and purple accent spotlights.')">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Aura 03 Deep Violet Drapery" 
+                             class="w-full h-full object-cover img-reveal filter grayscale">
+                        
+                        <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-black/80 backdrop-blur text-[10px] font-mono text-brand-purple uppercase tracking-widest border border-white/10">
+                            SPEC NO. 03 // SHEER
+                        </div>
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent opacity-90 group-hover:opacity-75 transition-opacity"></div>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 p-8 flex justify-between items-end">
+                            <div>
+                                <span class="text-xs font-mono text-brand-gray uppercase tracking-widest block">PIECE 03</span>
+                                <h3 class="text-2xl font-serif text-white font-medium group-hover:text-brand-turquoise transition-colors">AURA 03</h3>
+                                <p class="text-xs font-mono text-brand-gray mt-1">Deep Violet Micro-Pleated Sheer</p>
+                            </div>
+                            <span class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-brand-purple group-hover:bg-brand-purple transition-all">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="collection-item group" data-category="architectural">
+                    <div class="relative img-container bg-brand-surface aspect-[4/5] border border-white/10 overflow-hidden cursor-pointer" onclick="openModal('OBSIDIAN CURVE 04', 'Matte Black Structural Satin', 'Heavyweight Architectural Satin', 'Up to 18 ft Custom Arch', 'Curvilinear steel-truss framing wrapped in custom draped matte black fabric, designed as an iconic photostatic backdrop.')">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Obsidian Curve Architectural Backdrop" 
+                             class="w-full h-full object-cover img-reveal filter contrast-125">
+                        
+                        <div class="absolute top-4 left-4 z-10 px-3 py-1 bg-black/80 backdrop-blur text-[10px] font-mono text-brand-orange uppercase tracking-widest border border-white/10">
+                            SPEC NO. 04 // ARCHITECTURAL
+                        </div>
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent opacity-90 group-hover:opacity-75 transition-opacity"></div>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 p-8 flex justify-between items-end">
+                            <div>
+                                <span class="text-xs font-mono text-brand-gray uppercase tracking-widest block">PIECE 04</span>
+                                <h3 class="text-2xl font-serif text-white font-medium group-hover:text-brand-turquoise transition-colors">OBSIDIAN CURVE 04</h3>
+                                <p class="text-xs font-mono text-brand-gray mt-1">Asymmetrical Matte Black Arch</p>
+                            </div>
+                            <span class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-brand-orange group-hover:bg-brand-orange transition-all">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="backdropModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden items-center justify-center p-6">
+        <div class="bg-brand-charcoal border border-white/20 max-w-2xl w-full p-8 md:p-12 relative space-y-6">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-brand-gray hover:text-white">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            
+            <div class="inline-block px-3 py-1 border border-brand-turquoise text-[10px] font-mono uppercase text-brand-turquoise tracking-widest">
+                SPECIFICATION SHEET
+            </div>
+
+            <h3 id="modalTitle" class="text-3xl font-serif text-white font-light">TITLE</h3>
+            
+            <div class="grid grid-cols-2 gap-4 text-xs font-mono border-y border-white/10 py-4">
+                <div>
+                    <span class="text-brand-gray block">MATERIAL COMPOSITION</span>
+                    <span id="modalMaterial" class="text-white font-semibold">---</span>
+                </div>
+                <div>
+                    <span class="text-brand-gray block">TEXTILE GRADE</span>
+                    <span id="modalGrade" class="text-white font-semibold">---</span>
+                </div>
+                <div>
+                    <span class="text-brand-gray block">MAXIMUM SPAN</span>
+                    <span id="modalSpan" class="text-white font-semibold">---</span>
+                </div>
+                <div>
+                    <span class="text-brand-gray block">FIRE RATING</span>
+                    <span class="text-brand-turquoise font-semibold">NFPA 701 CERTIFIED</span>
+                </div>
+            </div>
+
+            <p id="modalDesc" class="text-sm font-sans text-brand-gray leading-relaxed">Description goes here.</p>
+
+            <div class="pt-4 flex gap-4">
+                <a href="#booking" onclick="closeModal()" class="w-full text-center bg-brand-pink text-white py-3 text-xs font-mono uppercase tracking-widest font-semibold hover:bg-white hover:text-black transition-colors">
+                    RESERVE THIS SPECIFICATION
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="artistry" class="py-32 px-6 md:px-12 bg-brand-surface border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto space-y-20">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-8">
+                    <span class="text-xs font-mono text-brand-turquoise tracking-widest uppercase">// 04 CRAFTSMANSHIP</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-white font-light leading-tight">
+                        THE PHYSICS OF <br>
+                        <span class="italic font-normal text-brand-turquoise">LUXURY DRAPING</span>
+                    </h2>
+
+                    <p class="text-sm text-brand-gray font-light leading-relaxed">
+                        Standard event decor treats fabric as a flat wall cover. At Élan, we treat fabric as an architectural medium governed by tension, gravity, shadow depth, and micro-fold pleating.
+                    </p>
+
+                    <div class="space-y-6 pt-4">
+                        <div class="flex items-start gap-4">
+                            <span class="text-xs font-mono text-brand-pink pt-1">01</span>
+                            <div>
+                                <h4 class="text-base font-serif text-white">Weighted Gravity System</h4>
+                                <p class="text-xs font-mono text-brand-gray mt-1">Internal hemline weights ensure straight vertical tension line and consistent floor pooling.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <span class="text-xs font-mono text-brand-turquoise pt-1">02</span>
+                            <div>
+                                <h4 class="text-base font-serif text-white">Lighting Response Optimization</h4>
+                                <p class="text-xs font-mono text-brand-gray mt-1">Fabrics selected specifically for light absorption versus specular reflection ratios.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <span class="text-xs font-mono text-brand-purple pt-1">03</span>
+                            <div>
+                                <h4 class="text-base font-serif text-white">Modular Rigging Architecture</h4>
+                                <p class="text-xs font-mono text-brand-gray mt-1">Freestanding telescoping frames with zero impact on venue structural walls.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="aspect-[3/4] bg-brand-charcoal overflow-hidden border border-white/10">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80" alt="Fabric close up texture detail" class="w-full h-full object-cover filter grayscale contrast-125">
+                    </div>
+                    <div class="aspect-[3/4] bg-brand-charcoal overflow-hidden border border-white/10 mt-8">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Architectural drapery gather" class="w-full h-full object-cover filter contrast-125">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="florals" class="py-32 px-6 md:px-12 relative">
+        <div class="max-w-7xl mx-auto space-y-16">
+            
+            <div class="max-w-2xl space-y-4">
+                <span class="text-xs font-mono text-brand-purple tracking-widest uppercase">// 05 BOTANICAL ARTISTRY</span>
+                <h2 class="text-4xl md:text-6xl font-serif text-white font-light">
+                    BOTANICAL <span class="italic text-brand-purple">SCULPTURE</span>
+                </h2>
+                <p class="text-sm font-mono text-brand-gray">
+                    Single-stem orchids, dried fan palm silhouettes, and sculptural foliage. Engineered strictly as artistic accents that complement the primary drapery structure.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="p-8 bg-brand-charcoal border border-white/10 space-y-6 hover:border-brand-purple transition-colors">
+                    <div class="aspect-square bg-brand-surface overflow-hidden border border-white/5">
+                        <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=800&q=80" alt="Orchid Sculpture" class="w-full h-full object-cover filter grayscale">
+                    </div>
+                    <span class="text-[10px] font-mono text-brand-purple uppercase">ARRANGEMENT 01</span>
+                    <h3 class="text-xl font-serif text-white">THE MONO-ORCHID</h3>
+                    <p class="text-xs font-mono text-brand-gray leading-relaxed">Minimalist single-branch phalaenopsis orchids attached with concealed tension wire.</p>
+                </div>
+
+                <div class="p-8 bg-brand-charcoal border border-white/10 space-y-6 hover:border-brand-pink transition-colors">
+                    <div class="aspect-square bg-brand-surface overflow-hidden border border-white/5">
+                        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=800&q=80" alt="Dried Palm Sculpture" class="w-full h-full object-cover filter grayscale">
+                    </div>
+                    <span class="text-[10px] font-mono text-brand-pink uppercase">ARRANGEMENT 02</span>
+                    <h3 class="text-xl font-serif text-white">EXOTIC PALM FAN</h3>
+                    <p class="text-xs font-mono text-brand-gray leading-relaxed">Bleached fan palms arranged asymmetrically across the top curtain drape apex.</p>
+                </div>
+
+                <div class="p-8 bg-brand-charcoal border border-white/10 space-y-6 hover:border-brand-turquoise transition-colors">
+                    <div class="aspect-square bg-brand-surface overflow-hidden border border-white/5">
+                        <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=800&q=80" alt="Cascading Foliage" class="w-full h-full object-cover filter grayscale">
+                    </div>
+                    <span class="text-[10px] font-mono text-brand-turquoise uppercase">ARRANGEMENT 03</span>
+                    <h3 class="text-xl font-serif text-white">ARCHITECTURAL BRANCH</h3>
+                    <p class="text-xs font-mono text-brand-gray leading-relaxed">Raw textured willow and magnolia branches providing organic contrast against smooth silk.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="photobooth" class="py-32 px-6 md:px-12 bg-gradient-to-b from-brand-charcoal to-brand-black border-y border-white/10 relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-6 space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-orange/10 border border-brand-orange/30 text-[10px] font-mono text-brand-orange uppercase tracking-widest">
+                    <span>THE CONTINUUM OFFERING</span>
+                </div>
+
+                <h2 class="text-4xl md:text-5xl font-serif text-white font-light">
+                    THE LUXURY <br>
+                    <span class="italic text-brand-orange">PHOTOBOOTH STUDIO</span>
+                </h2>
+
+                <p class="text-sm font-sans text-brand-gray leading-relaxed font-light">
+                    While drapery transforms the physical environment, our digital Photobooth Continuum captures your guests inside it. Studio lighting, custom brand overlays, instantaneous digital sharing, and physical gallery prints.
+                </p>
+
+                <div class="grid grid-cols-2 gap-6 pt-4 text-xs font-mono text-brand-gray border-t border-white/10">
+                    <div>
+                        <span class="text-white block font-semibold mb-1">STUDIO LIGHTING</span>
+                        <span>Ring halo & softbox strobes</span>
+                    </div>
+                    <div>
+                        <span class="text-white block font-semibold mb-1">INSTANT OUTPUT</span>
+                        <span>SMS, AirDrop & 4x6 Physical</span>
+                    </div>
+                    <div>
+                        <span class="text-white block font-semibold mb-1">LIVE GALLERY</span>
+                        <span>Real-time web gallery link</span>
+                    </div>
+                    <div>
+                        <span class="text-white block font-semibold mb-1">SEAMLESS FIT</span>
+                        <span>Integrates with any backdrop</span>
+                    </div>
+                </div>
+
+                <a href="#booking" class="inline-block border border-brand-orange text-brand-orange px-8 py-3 text-xs font-mono uppercase tracking-widest hover:bg-brand-orange hover:text-black transition-colors">
+                    BUNDLE PHOTOBOOTH + DRAPERY
+                </a>
+            </div>
+
+            <div class="lg:col-span-6">
+                <div class="relative bg-brand-surface p-8 border border-white/10 space-y-6">
+                    <div class="aspect-video bg-black overflow-hidden border border-white/10 relative">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80" alt="Photobooth Experience" class="w-full h-full object-cover filter contrast-125">
+                        <div class="absolute inset-0 bg-brand-orange/10 mix-blend-overlay"></div>
+                    </div>
+                    <div class="flex justify-between items-center text-xs font-mono text-brand-gray">
+                        <span>ÉLAN PHOTOBOOTH V.2349</span>
+                        <span class="text-brand-orange">HIGH RESOLUTION DIGITAL</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-12 bg-brand-black border-b border-white/10">
+        <div class="max-w-7xl mx-auto text-center space-y-8">
+            <span class="text-xs font-mono text-brand-gold tracking-widest uppercase">// 10 GEOGRAPHIC SERVICE AREA</span>
+            <h2 class="text-3xl md:text-5xl font-serif text-white">
+                MIDDLE GEORGIA <span class="italic font-normal text-brand-gray">& BEYOND</span>
+            </h2>
+            <p class="text-xs font-mono text-brand-gray max-w-xl mx-auto">
+                Headquartered in Middle Georgia. On-site installation teams serving Macon, Warner Robins, Perry, Forsyth, Dublin, Atlanta Metro, and Savannah.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 text-xs font-mono text-brand-white pt-4">
+                <span class="px-4 py-2 border border-white/10 bg-brand-surface">MACON, GA</span>
+                <span class="px-4 py-2 border border-white/10 bg-brand-surface">WARNER ROBINS, GA</span>
+                <span class="px-4 py-2 border border-white/10 bg-brand-surface">PERRY, GA</span>
+                <span class="px-4 py-2 border border-white/10 bg-brand-surface">ATLANTA METRO</span>
+                <span class="px-4 py-2 border border-white/10 bg-brand-surface">SAVANNAH, GA</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-32 px-6 md:px-12 relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            <div class="lg:col-span-5 space-y-8">
+                <span class="text-xs font-mono text-brand-pink tracking-widest uppercase">// 11 INITIATE RESERVATION</span>
+                <h2 class="text-4xl md:text-6xl font-serif text-white font-light leading-tight">
+                    YOUR EVENT <br>
+                    <span class="italic text-brand-pink">STARTS HERE.</span>
+                </h2>
+
+                <p class="text-sm font-sans text-brand-gray leading-relaxed font-light">
+                    Dates are strictly reserved on a first-confirmed basis. Complete the specifications below for availability, custom staging consultation, and transparent proposals.
+                </p>
+
+                <div class="space-y-4 pt-6 border-t border-white/10 text-xs font-mono">
+                    <div class="flex items-center gap-3 text-brand-white">
+                        <i data-lucide="mail" class="w-4 h-4 text-brand-pink"></i>
+                        <span>book.elanexperience@gmail.com</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-brand-white">
+                        <i data-lucide="globe" class="w-4 h-4 text-brand-turquoise"></i>
+                        <span>www.elanexperience.com</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-brand-white">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-purple"></i>
+                        <span>Middle Georgia Staging Facility</span>
+                    </div>
+                </div>
+
+                <!-- Estimated Total Widget -->
+                <div class="p-6 bg-brand-surface border border-white/10 space-y-2">
+                    <span class="text-[10px] font-mono text-brand-gray uppercase">ESTIMATED INVESTMENT RANGE</span>
+                    <div id="estimatedCost" class="text-2xl font-serif text-brand-turquoise">$650 — $1,850</div>
+                    <p class="text-[10px] font-mono text-brand-gray">Final rate determined by span height, venue logistics, and photobooth add-ons.</p>
+                </div>
+            </div>
+
+            <!-- Booking Form -->
+            <div class="lg:col-span-7 bg-brand-charcoal p-8 md:p-12 border border-white/10">
+                <form id="reservationForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="text-[10px] font-mono text-brand-gray uppercase block mb-2">FIRST NAME *</label>
+                            <input type="text" required class="w-full bg-brand-black border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-pink transition-colors" placeholder="Aria">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-mono text-brand-gray uppercase block mb-2">LAST NAME *</label>
+                            <input type="text" required class="w-full bg-brand-black border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-pink transition-colors" placeholder="Vance">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="text-[10px] font-mono text-brand-gray uppercase block mb-2">EMAIL ADDRESS *</label>
+                            <input type="email" required class="w-full bg-brand-black border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-pink transition-colors" placeholder="aria@vance.com">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-mono text-brand-gray uppercase block mb-2">PHONE NUMBER</label>
+                            <input type="tel" class="w-full bg-brand-black border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-pink transition-colors" placeholder="(478) 000-0000">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="text-[10px] font-mono text-brand-gray uppercase block mb-2">EVENT DATE *</label>
+                            <input type="date" required class="w-full bg-brand-black border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-pink transition-colors">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-mono text-brand-gray uppercase block mb-2">LOCATION / VENUE *</label>
+                            <input type="text" required class="w-full bg-brand-black border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-pink transition-colors" placeholder="The Glass House, Macon GA">
+                        </div>
+                    </div>
+
+                    <!-- Service Selection Checkboxes -->
+                    <div class="space-y-3">
+                        <label class="text-[10px] font-mono text-brand-gray uppercase block">REQUIRED EXPERIENCES</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
+                            <label class="flex items-center gap-2 p-3 bg-brand-black border border-white/10 cursor-pointer hover:border-brand-turquoise">
+                                <input type="checkbox" id="checkDrapery" checked onchange="updateEstimate()" class="accent-brand-turquoise">
+                                <span>Drapery Backdrop</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-3 bg-brand-black border border-white/10 cursor-pointer hover:border-brand-purple">
+                                <input type="checkbox" id="checkFlorals" onchange="updateEstimate()" class="accent-brand-purple">
+                                <span>Botanicals</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-3 bg-brand-black border border-white/10 cursor-pointer hover:border-brand-orange">
+                                <input type="checkbox" id="checkBooth" onchange="updateEstimate()" class="accent-brand-orange">
+                                <span>Photobooth</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-[10px] font-mono text-brand-gray uppercase block mb-2">MESSAGE / ATMOSPHERIC VISION</label>
+                        <textarea rows="4" class="w-full bg-brand-black border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-pink transition-colors" placeholder="Describe ceiling heights, color themes, or specific backdrop pieces..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-brand-white text-brand-black text-xs font-mono uppercase tracking-superwide font-bold hover:bg-brand-pink hover:text-white transition-all duration-300">
+                        INITIATE RESERVATION REQUEST
+                    </button>
+
+                    <p class="text-[10px] font-mono text-brand-gray text-center">
+                        By submitting, you agree to our 24-hour response protocol and policy terms.
+                    </p>
+                </form>
+
+                <!-- Confirmation Notice -->
+                <div id="formSuccess" class="hidden p-8 bg-brand-surface border border-brand-turquoise text-center space-y-4 mt-6">
+                    <i data-lucide="check-circle" class="w-12 h-12 text-brand-turquoise mx-auto"></i>
+                    <h4 class="text-2xl font-serif text-white">RESERVATION TRANSMITTED</h4>
+                    <p class="text-xs font-mono text-brand-gray">Our lead creative consultant will review your specifications and contact you at book.elanexperience@gmail.com within 24 hours.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 md:px-12 bg-brand-black border-t border-white/10 text-xs font-mono text-brand-gray">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-white/10 pb-12">
+                <div>
+                    <a href="#" class="font-serif text-3xl text-white font-bold tracking-tight">ÉLAN EXPERIENCE</a>
+                    <p class="text-[10px] text-brand-gray mt-1">THE FUTURE OF DRAPERY ATMOSPHERE // MIDDLE GEORGIA</p>
+                </div>
+
+                <div class="flex flex-wrap gap-8 text-[11px] uppercase tracking-widest">
+                    <a href="#collection" class="hover:text-brand-pink">Collection</a>
+                    <a href="#artistry" class="hover:text-brand-turquoise">Craftsmanship</a>
+                    <a href="#florals" class="hover:text-brand-purple">Botanicals</a>
+                    <a href="#photobooth" class="hover:text-brand-orange">Photobooth</a>
+                    <a href="#booking" class="hover:text-brand-gold">Reserve</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px]">
+                <p>© 2349 ÉLAN EXPERIENCE LLC. ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white">PRIVACY POLICY</a>
+                    <a href="#" class="hover:text-white">TERMS OF SERVICE</a>
+                    <a href="#" class="hover:text-white">ACCESSIBILITY</a>
+                    <a href="#" class="hover:text-white">REFUND POLICY</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        document.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Collection Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const collectionItems = document.querySelectorAll('.collection-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                // Update tab styles
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-pink', 'text-white', 'border-brand-pink');
+                    b.classList.add('text-brand-gray', 'border-white/10');
+                });
+                btn.classList.add('bg-brand-pink', 'text-white', 'border-brand-pink');
+                btn.classList.remove('text-brand-gray', 'border-white/10');
+
+                // Filter items
+                collectionItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('backdropModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMaterial = document.getElementById('modalMaterial');
+        const modalGrade = document.getElementById('modalGrade');
+        const modalSpan = document.getElementById('modalSpan');
+        const modalDesc = document.getElementById('modalDesc');
+
+        function openModal(title, material, grade, span, desc) {
+            modalTitle.innerText = title;
+            modalMaterial.innerText = material;
+            modalGrade.innerText = grade;
+            modalSpan.innerText = span;
+            modalDesc.innerText = desc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Reservation Form Pricing Estimator
+        function updateEstimate() {
+            const drapery = document.getElementById('checkDrapery').checked;
+            const florals = document.getElementById('checkFlorals').checked;
+            const booth = document.getElementById('checkBooth').checked;
+
+            let base = 0;
+            let max = 0;
+
+            if (drapery) { base += 650; max += 1200; }
+            if (florals) { base += 350; max += 750; }
+            if (booth) { base += 450; max += 850; }
+
+            if (!drapery && !florals && !booth) {
+                document.getElementById('estimatedCost').innerText = '$0';
+            } else {
+                document.getElementById('estimatedCost').innerText = `$${base} — $${max}`;
+            }
+        }
+
+        // Form Submission
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('reservationForm').classList.add('hidden');
+            document.getElementById('formSuccess').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
