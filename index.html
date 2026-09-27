@@ -993,14 +993,20 @@
             document.getElementById('reservationForm').classList.add('hidden');
             document.getElementById('formSuccess').classList.remove('hidden');
         }
-    </script>
+<script>
+    // Always start the page at the top on refresh/load
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
 
-
-    <script>
-    window.history.scrollRestoration = 'manual';
+    window.addEventListener('beforeunload', function () {
+        window.scrollTo(0, 0);
+    });
 
     window.addEventListener('load', function () {
-        window.scrollTo(0, 0);
+        setTimeout(function () {
+            window.scrollTo(0, 0);
+        }, 100);
     });
 </script>
 </body>
